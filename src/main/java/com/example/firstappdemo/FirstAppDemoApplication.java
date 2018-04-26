@@ -14,6 +14,6 @@ public class FirstAppDemoApplication {
 	}
 	@RequestMapping(value = "test")
 	public String Json(){
-		return "Hello World1";
+		return "Hello World2";
 	}
 }
