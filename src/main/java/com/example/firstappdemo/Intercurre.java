@@ -23,7 +23,7 @@ public class Intercurre {
         for(int i=0;i<count;i++){
             executorService.execute(new TestTask(cyclicBarrier));
         }
-        executorService.shutdown();
+       executorService.shutdown();
         while (!executorService.isTerminated()) {
            try {
                Thread.sleep(10);

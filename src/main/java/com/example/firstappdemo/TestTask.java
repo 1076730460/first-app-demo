@@ -10,15 +10,12 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class TestTask implements Runnable {
-    //@Autowired
-   // private RestTemplate restTemplate;
     private CyclicBarrier cyclicBarrier;
     public static AtomicInteger a=new AtomicInteger(0);
 
     public TestTask(CyclicBarrier cyclicBarrier) {
         this.cyclicBarrier = cyclicBarrier;
     }
-
     @Override
     public void run() {
         try {
@@ -39,8 +36,6 @@ public class TestTask implements Runnable {
 //  封装参数，千万不要替换为Map与HashMap，否则参数无法传递
         MultiValueMap<String, String> params= new LinkedMultiValueMap<String, String>();
 //  也支持中文
-        // params.add("username", "用户名");
-        //params.add("password", "123456");
         HttpEntity<MultiValueMap<String, String>> requestEntity = new HttpEntity<MultiValueMap<String, String>>(params, headers);
 //  执行HTTP请求
         ResponseEntity<String> response = client.exchange(url, HttpMethod.POST, requestEntity, String.class);
