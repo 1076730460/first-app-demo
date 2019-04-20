@@ -60,6 +60,10 @@
 			<version>2.6.1</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
